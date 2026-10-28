@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cosplay Cost Calculator - How Much Will Your Costume Cost? | BuildSheet</title>
+<meta name="description" content="Free cosplay cost calculator: pick wig, armor, props, sewing and makeup to get a cost range, total build hours and whether you will finish before your con.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://mobizombi.github.io/buildsheet/cost-calculator/">
+<meta property="og:title" content="Cosplay Cost Calculator - How Much Will Your Costume Cost? | BuildSheet">
+<meta property="og:description" content="Free cosplay cost calculator: pick wig, armor, props, sewing and makeup to get a cost range, total build hours and whether you will finish before your con.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1d5c45">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=mvs4gmey">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cosplay cost calculator","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../">Build<b>Sheet</b></a>
+<nav class="nav" aria-label="Main">
+<a href="../cost-calculator/">Cost calculator</a>
+<a href="../guides/">Build guides</a>
+<a href="../#join">Join the waitlist</a>
+</nav>
+</div></header>
+<main>
+<div class="mat envelope"><div class="wrap">
+<p class="pattern-no"><small>Free tool</small>No.&nbsp;0002</p>
+<h1>Cosplay cost calculator</h1>
+<p class="lede">Tick the parts your costume needs. Get a cost range, the hours it will take, and whether you can finish before your con.</p>
+</div></div>
+<section><div class="wrap calc-grid">
+<form id="calc" aria-label="Costume parts" onsubmit="return false">
+<div class="form-row" style="margin-bottom:16px">
+<div class="field"><label for="con">Con date</label><input id="con" type="date"></div>
+<div class="field"><label for="hpw">Hours you can build per week</label><select id="hpw"><option>3</option><option>5</option><option selected>8</option><option>12</option><option>20</option></select></div>
+</div>
+<div class="field" style="margin-bottom:16px"><label for="tier">Budget style</label><select id="tier"><option value="0">Thrifty - thrift, scrap, DIY everything</option><option value="0.5" selected>Balanced</option><option value="1">Premium - kits, good wigs, nice finishes</option></select></div>
+<div class="parts">
+<div class="part"><input type="checkbox" id="p-wig" data-part="wig"><label for="p-wig">Wig</label>
+<div class="opts"><select aria-label="Wig type" data-opt="wig"><option value="0">Pre-styled wig</option><option value="1">Lace-front, custom styled</option></select></div>
+<span class="hint">Character hair is half the recognition.</span></div><div class="part"><input type="checkbox" id="p-armor" data-part="armor"><label for="p-armor">Foam armor</label>
+<div class="opts"><select aria-label="Foam armor type" data-opt="armor"><option value="0">Light pieces (bracers, chest)</option><option value="1">Full armor set</option></select></div>
+<span class="hint">EVA foam, contact cement, primer.</span></div><div class="part"><input type="checkbox" id="p-garment" data-part="garment"><label for="p-garment">Main garment</label>
+<div class="opts"><select aria-label="Main garment type" data-opt="garment"><option value="0">Simple sewn or modified</option><option value="1">Tailored coat or dress</option></select></div>
+<span class="hint">The base outfit everything sits on.</span></div><div class="part"><input type="checkbox" id="p-cape" data-part="cape"><label for="p-cape">Cape or cloak</label>
+
+<span class="hint">2-3 yards of fabric.</span></div><div class="part"><input type="checkbox" id="p-helmet" data-part="helmet"><label for="p-helmet">Helmet or headpiece</label>
+<div class="opts"><select aria-label="Helmet or headpiece type" data-opt="helmet"><option value="0">Foam headpiece or crown</option><option value="1">Full helmet</option></select></div>
+<span class="hint">Foam, 3D print or resin kit.</span></div><div class="part"><input type="checkbox" id="p-prop" data-part="prop"><label for="p-prop">Prop weapon</label>
+<div class="opts"><select aria-label="Prop weapon type" data-opt="prop"><option value="0">Foam prop</option><option value="1">3D printed or resin prop</option></select></div>
+<span class="hint">Check your con's prop policy.</span></div><div class="part"><input type="checkbox" id="p-shoes" data-part="shoes"><label for="p-shoes">Shoes or boot covers</label>
+<div class="opts"><select aria-label="Shoes or boot covers type" data-opt="shoes"><option value="0">Thrifted or modified</option><option value="1">Custom boot covers</option></select></div>
+<span class="hint">Comfort beats accuracy on con day.</span></div><div class="part"><input type="checkbox" id="p-makeup" data-part="makeup"><label for="p-makeup">Makeup or prosthetics</label>
+<div class="opts"><select aria-label="Makeup or prosthetics type" data-opt="makeup"><option value="0">Makeup only</option><option value="1">Prosthetics or scar work</option></select></div>
+<span class="hint">Base, details, setting spray.</span></div><div class="part"><input type="checkbox" id="p-acc" data-part="acc"><label for="p-acc">Belts, pouches &amp; jewelry</label>
+<div class="opts"><select aria-label="Belts, pouches &amp; jewelry type" data-opt="acc"><option value="0">A few accessories</option><option value="1">Lots of accessories</option></select></div>
+<span class="hint">Small parts add up.</span></div><div class="part"><input type="checkbox" id="p-paint" data-part="paint"><label for="p-paint">Paint, seal &amp; finish</label>
+
+<span class="hint">Primer, paints, clear coat.</span></div>
+<div class="part"><input type="checkbox" id="p-tools" data-part="tools"><label for="p-tools">First build - I need tools</label><span class="hint">Glue gun, heat gun, cutting mat, blades: about $40-120 once.</span></div>
+</div>
+</form>
+<aside class="calc-out" aria-live="polite">
+<div class="sheet">
+<div class="sheet-head"><strong>Your estimate</strong><span id="count">0 parts</span></div>
+<div style="padding:16px">
+<p style="margin:0 0 4px;font-size:14px;color:var(--ink-2)">Cost</p>
+<p class="big" id="cost">$0</p>
+<p style="margin:16px 0 4px;font-size:14px;color:var(--ink-2)">Build time</p>
+<p class="big" id="hours">0 hrs</p>
+<p style="margin:16px 0 0" id="fit">Pick your con date to see if it fits.</p>
+</div>
+<div class="sheet-foot"><span>Want it as a dated plan?</span><a href="#join">Get a full sheet</a></div>
+</div>
+</aside>
+</div></section>
+<section><div class="wrap"><div class="join" id="join">
+<h2>Turn this estimate into a dated build sheet</h2>
+<p class="measure">BuildSheet opens to a small group first. Tell us what you are building and when your con is - waitlist members get their first full sheet free, then $5 per costume.</p>
+<form class="form" action="https://formsubmit.co/trafficgoathq@gmail.com" method="POST" data-ajax="https://formsubmit.co/ajax/trafficgoathq@gmail.com">
+<input type="hidden" name="_subject" value="BuildSheet waitlist">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="source" value="calculator">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="field"><label for="em-calculator">Email</label><input id="em-calculator" type="email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
+<div class="form-row">
+<div class="field"><label for="co-calculator">What are you building?</label><input id="co-calculator" type="text" name="costume" placeholder="e.g. Mandalorian, Jinx, my OC" maxlength="120"></div>
+<div class="field"><label for="dt-calculator">Con date (optional)</label><input id="dt-calculator" type="date" name="con_date"></div>
+</div>
+<div class="btns"><button class="btn" type="submit">Join the waitlist</button></div>
+<p class="form-msg" role="status" aria-live="polite"></p>
+<p class="form-note">One email when your spot opens. No spam, unsubscribe any time. <a href="../privacy/">Privacy</a>.</p>
+</form>
+</div></div></section>
+<section><div class="wrap">
+<h2>Cost and time by costume</h2>
+<div class="cards"><a class="card" href="../guides/mandalorian-cosplay-guide/"><h3>The Mandalorian</h3><p>$280-740 - 120 hrs</p></a><a class="card" href="../guides/harley-quinn-cosplay-guide/"><h3>Harley Quinn</h3><p>$140-400 - 25 hrs</p></a><a class="card" href="../guides/geralt-of-rivia-cosplay-guide/"><h3>Geralt of Rivia</h3><p>$260-705 - 86 hrs</p></a><a class="card" href="../guides/wonder-woman-cosplay-guide/"><h3>Wonder Woman</h3><p>$200-545 - 81 hrs</p></a><a class="card" href="../guides/loki-cosplay-guide/"><h3>Loki</h3><p>$245-610 - 88 hrs</p></a></div>
+</div></section>
+<script>window.BS_PARTS=[["wig",[[30,60,2],[60,140,8]]],["armor",[[40,80,25],[80,180,60]]],["garment",[[25,60,10],[60,160,30]]],["cape",[[20,50,5]]],["helmet",[[15,40,8],[40,150,25]]],["prop",[[15,50,10],[40,150,20]]],["shoes",[[20,60,3],[40,90,8]]],["makeup",[[15,50,2],[40,120,6]]],["acc",[[15,40,4],[40,90,10]]],["paint",[[20,50,6]]]];</script>
+<script src="../js/calc.js?v=mvs4gmey" defer></script>
+</main>
+<footer><div class="wrap">
+<span>BuildSheet - costume build plans worked back from con day. Fan-made guides, not affiliated with any studio or rights holder.</span>
+<nav aria-label="Footer"><a href="../guides/">Guides</a><a href="../cost-calculator/">Calculator</a><a href="../privacy/">Privacy</a></nav>
+</div></footer>
+<script src="../js/form.js?v=mvs4gmey" defer></script>
+</body>
+</html>
