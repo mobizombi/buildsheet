@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cosplay Cost Calculator - How Much Will Your Costume Cost? | BuildSheet</title>
+<meta name="description" content="Free cosplay cost calculator: pick wig, armor, props, sewing and makeup to get a cost range, total build hours and whether you will finish before your con.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://mobizombi.github.io/buildsheet/cost-calculator/">
+<meta property="og:title" content="Cosplay Cost Calculator - How Much Will Your Costume Cost? | BuildSheet">
+<meta property="og:description" content="Free cosplay cost calculator: pick wig, armor, props, sewing and makeup to get a cost range, total build hours and whether you will finish before your con.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1d5c45">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css?v=mwquofsj">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Cosplay cost calculator","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="../">Build<b>Sheet</b></a>
+<nav class="nav" aria-label="Main">
+<a href="../cost-calculator/">Cost calculator</a>
+<a href="../guides/">Build guides</a>
+<a href="../showcase/">Showcase</a>
+<a href="../#join">Join the waitlist</a>
+</nav>
+</div></header>
+<main>
+<div class="mat envelope"><div class="wrap">
+<p class="pattern-no"><small>Free tool</small>No.&nbsp;0002</p>
+<h1>Cosplay cost calculator</h1>
+<p class="lede">Tick the parts your costume needs and pick how you'll make each one. Every number is a starting point - change the hours, waiting time or cost to your own.</p>
+<p class="changelog"><strong>v2, 20 Nov:</strong> split by material (foam / FDM / resin), armor piece by piece, waiting time for glue, paint and prints (and whether you run it overnight), experience level, and editable numbers on every line. Thanks to the prop makers who tore v1 apart.</p>
+</div></div>
+<section><div class="wrap calc-grid">
+<form id="calc" aria-label="Costume parts" onsubmit="return false">
+<div class="form-row" style="margin-bottom:16px">
+<div class="field"><label for="con">Con date</label><input id="con" type="date"></div>
+<div class="field"><label for="hpw">Hours you can build per week</label><select id="hpw"><option>3</option><option>5</option><option selected>8</option><option>12</option><option>20</option></select></div>
+</div>
+<div class="form-row" style="margin-bottom:16px">
+<div class="field"><label for="xp">Your experience</label><select id="xp"><option value="1.7">First big build</option><option value="1" selected>A few builds in</option><option value="0.6">Experienced / pro</option></select></div>
+<div class="field"><label for="tier">Budget style</label><select id="tier"><option value="0">Thrifty - scrap, thrift, DIY</option><option value="0.5" selected>Balanced</option><option value="1">Premium - kits, good wigs, nice finishes</option></select></div>
+</div>
+<div class="field" style="margin-bottom:16px"><label for="waitmode">How you handle drying, curing and printing</label><select id="waitmode"><option value="0.15" selected>I set them up last thing, so they run overnight or while I'm at work</option><option value="0.5">I often have to stop and wait before I can carry on</option></select></div>
+<h2 class="part-group">Head</h2>
+<div class="parts">
+<div class="part" data-row="wig"><input type="checkbox" id="p-wig" data-part="wig"><label for="p-wig">Wig</label>
+<div class="opts"><select aria-label="Wig method" data-opt="wig"><option value="0">Pre-styled wig</option><option value="1">Lace-front, custom styled</option></select></div>
+<span class="hint">Styling with spray or heat needs set time between passes.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="helmet"><input type="checkbox" id="p-helmet" data-part="helmet"><label for="p-helmet">Helmet</label>
+<div class="opts"><select aria-label="Helmet method" data-opt="helmet"><option value="0">EVA foam helmet</option><option value="1">FDM 3D print (filament + filler + sanding)</option><option value="2">Resin 3D print</option><option value="3">Bought resin kit (clean-up + paint)</option></select></div>
+<span class="hint">Foam, FDM and resin are very different jobs - pick yours.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="headpiece"><input type="checkbox" id="p-headpiece" data-part="headpiece"><label for="p-headpiece">Crown, horns or headpiece</label>
+<div class="opts"><select aria-label="Crown, horns or headpiece method" data-opt="headpiece"><option value="0">EVA foam / thermoplastic</option><option value="1">3D printed</option></select></div>
+<span class="hint">Smaller than a helmet.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div>
+</div><h2 class="part-group">Armor - piece by piece</h2>
+<div class="parts">
+<div class="part" data-row="chest"><input type="checkbox" id="p-chest" data-part="chest"><label for="p-chest">Chest plate (front only)</label>
+<div class="opts"><select aria-label="Chest plate (front only) method" data-opt="chest"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+<span class="hint">Back plate is its own line below.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="back"><input type="checkbox" id="p-back" data-part="back"><label for="p-back">Back plate</label>
+<div class="opts"><select aria-label="Back plate method" data-opt="back"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="shoulders"><input type="checkbox" id="p-shoulders" data-part="shoulders"><label for="p-shoulders">Shoulders / pauldrons (pair)</label>
+<div class="opts"><select aria-label="Shoulders / pauldrons (pair) method" data-opt="shoulders"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="forearms"><input type="checkbox" id="p-forearms" data-part="forearms"><label for="p-forearms">Forearms / bracers (pair)</label>
+<div class="opts"><select aria-label="Forearms / bracers (pair) method" data-opt="forearms"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="gauntlets"><input type="checkbox" id="p-gauntlets" data-part="gauntlets"><label for="p-gauntlets">Gauntlets / hand armor (pair)</label>
+<div class="opts"><select aria-label="Gauntlets / hand armor (pair) method" data-opt="gauntlets"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+<span class="hint">Fingers are fiddly - this is where time disappears.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="abdomen"><input type="checkbox" id="p-abdomen" data-part="abdomen"><label for="p-abdomen">Abdomen, belt or hip armor</label>
+<div class="opts"><select aria-label="Abdomen, belt or hip armor method" data-opt="abdomen"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="thighs"><input type="checkbox" id="p-thighs" data-part="thighs"><label for="p-thighs">Thigh armor (pair)</label>
+<div class="opts"><select aria-label="Thigh armor (pair) method" data-opt="thighs"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="shins"><input type="checkbox" id="p-shins" data-part="shins"><label for="p-shins">Shins / greaves (pair)</label>
+<div class="opts"><select aria-label="Shins / greaves (pair) method" data-opt="shins"><option value="0">EVA foam - simple shape</option><option value="1">EVA foam - ornate / layered detail</option><option value="2">3D print (FDM) - simple</option><option value="3">3D print (FDM) - ornate</option></select></div>
+
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div>
+</div><h2 class="part-group">Clothing</h2>
+<div class="parts">
+<div class="part" data-row="garment"><input type="checkbox" id="p-garment" data-part="garment"><label for="p-garment">Main garment</label>
+<div class="opts"><select aria-label="Main garment method" data-opt="garment"><option value="0">Bought and modified</option><option value="1">Simple sewn</option><option value="2">Tailored coat or dress</option></select></div>
+<span class="hint">The base outfit everything sits on.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="cape"><input type="checkbox" id="p-cape" data-part="cape"><label for="p-cape">Cape or cloak</label>
+
+<span class="hint">2-3 yards of fabric.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="shoes"><input type="checkbox" id="p-shoes" data-part="shoes"><label for="p-shoes">Shoes or boot covers</label>
+<div class="opts"><select aria-label="Shoes or boot covers method" data-opt="shoes"><option value="0">Thrifted or modified</option><option value="1">Custom boot covers</option></select></div>
+<span class="hint">Comfort beats accuracy on con day.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div>
+</div><h2 class="part-group">Props</h2>
+<div class="parts">
+<div class="part" data-row="prop"><input type="checkbox" id="p-prop" data-part="prop"><label for="p-prop">Prop weapon</label>
+<div class="opts"><select aria-label="Prop weapon method" data-opt="prop"><option value="0">EVA foam</option><option value="1">FDM 3D print</option><option value="2">Resin 3D print</option><option value="3">Bought resin kit or cast</option></select></div>
+<span class="hint">Check your con's prop policy.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div>
+</div><h2 class="part-group">Details &amp; finish</h2>
+<div class="parts">
+<div class="part" data-row="makeup"><input type="checkbox" id="p-makeup" data-part="makeup"><label for="p-makeup">Makeup or prosthetics</label>
+<div class="opts"><select aria-label="Makeup or prosthetics method" data-opt="makeup"><option value="0">Makeup only</option><option value="1">Prosthetics or scar work</option></select></div>
+<span class="hint">Base, details, setting spray.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="acc"><input type="checkbox" id="p-acc" data-part="acc"><label for="p-acc">Belts, pouches &amp; jewelry</label>
+<div class="opts"><select aria-label="Belts, pouches &amp; jewelry method" data-opt="acc"><option value="0">A few accessories</option><option value="1">Lots of accessories</option></select></div>
+<span class="hint">Small parts add up.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div><div class="part" data-row="paint"><input type="checkbox" id="p-paint" data-part="paint"><label for="p-paint">Paint &amp; finish</label>
+<div class="opts"><select aria-label="Paint &amp; finish method" data-opt="paint"><option value="0">Primer + 1-2 colors</option><option value="1">Primer + 3-4 colors + weathering</option><option value="2">Show-quality: filler, many colors, clear coat</option></select></div>
+<span class="hint">Most spray paints want ~24h before the next color. Waiting covers recoats + clear coat cure.</span>
+<div class="edit"><label>Your hours<input type="number" min="0" step="1" inputmode="numeric" data-f="work"></label><label>Waiting hrs<input type="number" min="0" step="1" inputmode="numeric" data-f="wait"></label><label>Cost $<input type="number" min="0" step="5" inputmode="numeric" data-f="cost"></label><button type="button" class="reset" hidden>Reset</button></div></div>
+</div>
+<h2 class="part-group">Tools</h2>
+<div class="parts"><div class="part"><input type="checkbox" id="p-tools" data-part="tools"><label for="p-tools">I need to buy tools</label><span class="hint">Glue gun, heat gun, cutting mat, blades: about $40-120 once.</span></div></div>
+</form>
+<aside class="calc-out" aria-live="polite">
+<div class="sheet">
+<div class="sheet-head"><strong>Your estimate</strong><span id="count">0 parts</span></div>
+<div style="padding:16px">
+<p class="out-label">Cost</p>
+<p class="big" id="cost">$0</p>
+<p class="out-label">Your hands-on hours</p>
+<p class="big" id="hours">0 hrs</p>
+<p class="out-label">Waiting time (glue, paint, prints)</p>
+<p class="mid" id="wait">0 hrs</p>
+<p class="out-note" id="waitnote">Doesn't need you, but it eats calendar days. </p>
+<p style="margin:16px 0 0" id="fit">Pick your con date to see if it fits.</p>
+<p class="out-note" id="sinks"></p>
+<p class="out-note" id="shoplink" hidden><a href="#shoplist">See your shopping list</a></p>
+</div>
+<div class="sheet-foot"><span>Want it as a dated plan?</span><a href="#join">Get a full sheet</a></div>
+</div>
+</aside>
+</div></section>
+<section id="shoplist" hidden><div class="wrap">
+<h2>Your shopping list</h2>
+<p class="measure">Built from the parts you ticked. Amazon is usually fastest for US shipping; AliExpress is cheaper if you order 3-4 weeks ahead.</p>
+<div class="sheet"><div class="sheet-head"><strong>Shopping list</strong><span id="shopcount"></span></div><div class="table-scroll"><table class="shop"><thead><tr><th scope="col">Material</th><th scope="col">Where to get it</th></tr></thead><tbody id="shoprows"></tbody></table></div></div>
+<p class="form-note" style="margin-top:8px">Shopping links go to Amazon and AliExpress searches. As an Amazon Associate and AliExpress affiliate, BuildSheet earns a small commission from qualifying purchases - it costs you nothing extra.</p>
+</div></section>
+<section><div class="wrap"><div class="join" id="join">
+<h2>Turn this estimate into a dated build sheet</h2>
+<p class="measure">BuildSheet opens to a small group first. Tell us what you are building and when your con is - waitlist members get their first full sheet free, then $5 per costume.</p>
+<form class="form" action="https://formsubmit.co/trafficgoathq@gmail.com" method="POST" data-ajax="https://formsubmit.co/ajax/trafficgoathq@gmail.com">
+<input type="hidden" name="_subject" value="BuildSheet waitlist">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="source" value="calculator">
+<input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="field"><label for="em-calculator">Email</label><input id="em-calculator" type="email" name="email" required autocomplete="email" placeholder="you@example.com"></div>
+<div class="form-row">
+<div class="field"><label for="co-calculator">What are you building?</label><input id="co-calculator" type="text" name="costume" placeholder="e.g. Mandalorian, Jinx, my OC" maxlength="120"></div>
+<div class="field"><label for="dt-calculator">Con date (optional)</label><input id="dt-calculator" type="date" name="con_date"></div>
+</div>
+<div class="btns"><button class="btn" type="submit">Join the waitlist</button></div>
+<p class="form-msg" role="status" aria-live="polite"></p>
+<p class="form-note">One email when your spot opens. No spam, unsubscribe any time. <a href="../privacy/">Privacy</a>.</p>
+</form>
+</div></div></section>
+<section><div class="wrap">
+<h2>Cost and time by costume</h2>
+<div class="cards"><a class="card" href="../guides/mandalorian-cosplay-guide/"><h3>The Mandalorian</h3><p>$280-740 - 120 hrs</p></a><a class="card" href="../guides/harley-quinn-cosplay-guide/"><h3>Harley Quinn</h3><p>$140-400 - 25 hrs</p></a><a class="card" href="../guides/geralt-of-rivia-cosplay-guide/"><h3>Geralt of Rivia</h3><p>$260-705 - 86 hrs</p></a><a class="card" href="../guides/wonder-woman-cosplay-guide/"><h3>Wonder Woman</h3><p>$200-545 - 81 hrs</p></a><a class="card" href="../guides/loki-cosplay-guide/"><h3>Loki</h3><p>$245-610 - 88 hrs</p></a></div>
+</div></section>
+<script>window.BS_PARTS=[["wig","Wig",[[30,60,2,0],[60,140,8,4]]],["helmet","Helmet",[[25,50,20,24],[40,90,16,60],[60,140,12,30],[80,200,10,24]]],["headpiece","Crown, horns or headpiece",[[10,30,6,12],[15,45,5,20]]],["chest","Chest plate (front only)",[[15,30,8,12],[25,50,18,18],[30,60,10,60],[40,80,16,90]]],["back","Back plate",[[10,25,6,12],[20,40,12,18],[25,50,8,50],[35,70,12,70]]],["shoulders","Shoulders / pauldrons (pair)",[[10,20,5,12],[15,35,10,18],[20,40,6,30],[30,55,10,45]]],["forearms","Forearms / bracers (pair)",[[8,15,4,12],[12,25,8,18],[15,30,5,24],[20,40,8,36]]],["gauntlets","Gauntlets / hand armor (pair)",[[10,20,6,12],[15,30,12,18],[20,40,8,30],[30,60,14,45]]],["abdomen","Abdomen, belt or hip armor",[[8,15,4,12],[12,25,8,18],[15,30,5,24],[20,40,8,36]]],["thighs","Thigh armor (pair)",[[10,20,5,12],[15,30,10,18],[25,45,6,36],[35,60,10,50]]],["shins","Shins / greaves (pair)",[[10,20,5,12],[15,30,10,18],[25,45,6,36],[35,60,10,50]]],["garment","Main garment",[[25,60,4,0],[25,60,12,0],[60,160,30,0]]],["cape","Cape or cloak",[[20,50,5,0]]],["shoes","Shoes or boot covers",[[20,60,3,0],[40,90,8,12]]],["prop","Prop weapon",[[15,50,10,24],[25,70,10,40],[40,100,8,24],[60,150,8,24]]],["makeup","Makeup or prosthetics",[[15,50,2,0],[40,120,6,12]]],["acc","Belts, pouches & jewelry",[[15,40,4,6],[40,90,10,12]]],["paint","Paint & finish",[[20,40,6,48],[35,70,14,96],[60,120,25,144]]]];</script>
+<script>window.BS_SHOP={"items":{"eva10":{"key":"eva10","label":"10mm EVA foam sheets","amazon":"https://www.amazon.com/s?k=eva%20foam%20sheet%2010mm%20cosplay&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c2zpwEcz"},"eva5":{"key":"eva5","label":"5mm EVA foam sheets","amazon":"https://www.amazon.com/s?k=eva%20foam%20sheet%205mm%20cosplay&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3VJO61J"},"eva2":{"key":"eva2","label":"2mm EVA craft foam","amazon":"https://www.amazon.com/s?k=eva%20foam%202mm%20cosplay&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c2znup7R"},"contact":{"key":"contact","label":"Contact cement","amazon":"https://www.amazon.com/s?k=contact%20cement%20glue&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3VZR7SN"},"heatgun":{"key":"heatgun","label":"Heat gun","amazon":"https://www.amazon.com/s?k=heat%20gun%20crafts&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3GqI2pX"},"knife":{"key":"knife","label":"Snap-off knife + spare blades","amazon":"https://www.amazon.com/s?k=snap%20off%20utility%20knife%20blades&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3lK5aY9"},"mat":{"key":"mat","label":"Self-healing cutting mat","amazon":"https://www.amazon.com/s?k=self%20healing%20cutting%20mat%20a2&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c4cBYhRB"},"rotary":{"key":"rotary","label":"Rotary tool (Dremel-style)","amazon":"https://www.amazon.com/s?k=rotary%20tool%20kit&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3E1VZu1"},"sealer":{"key":"sealer","label":"Flexible foam sealer (Plasti Dip-style)","amazon":"https://www.amazon.com/s?k=plasti%20dip%20spray&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c4csPU2D"},"thermo":{"key":"thermo","label":"Thermoplastic sheet (Worbla-style)","amazon":"https://www.amazon.com/s?k=thermoplastic%20sheet%20cosplay&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3t6ogPx"},"pla":{"key":"pla","label":"PLA filament","amazon":"https://www.amazon.com/s?k=pla%20filament%201.75mm&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3k8xNpb"},"resin":{"key":"resin","label":"3D printer resin","amazon":"https://www.amazon.com/s?k=3d%20printer%20resin&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3jHirtj"},"putty":{"key":"putty","label":"Spot putty / filler","amazon":"https://www.amazon.com/s?k=spot%20putty%20filler&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3dwdFpL"},"sanding":{"key":"sanding","label":"Sanding sponges + sandpaper set","amazon":"https://www.amazon.com/s?k=sandpaper%20assortment%20sanding%20sponge&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3Bpnw4d"},"fillerprimer":{"key":"fillerprimer","label":"Filler primer spray","amazon":"https://www.amazon.com/s?k=filler%20primer%20spray%20paint&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c43C5lLX"},"chrome":{"key":"chrome","label":"Mirror chrome spray paint","amazon":"https://www.amazon.com/s?k=mirror%20chrome%20spray%20paint&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3yk3Jov"},"goldpaint":{"key":"goldpaint","label":"Gold metallic paint","amazon":"https://www.amazon.com/s?k=gold%20metallic%20spray%20paint&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3ew5t3B"},"silverpaint":{"key":"silverpaint","label":"Silver metallic paint","amazon":"https://www.amazon.com/s?k=silver%20metallic%20paint&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3rZA4MV"},"acrylic":{"key":"acrylic","label":"Acrylic paint set + brushes","amazon":"https://www.amazon.com/s?k=acrylic%20paint%20set%20brushes&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3Qw8Adn"},"clear":{"key":"clear","label":"Clear coat spray","amazon":"https://www.amazon.com/s?k=clear%20coat%20spray%20matte%20gloss&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c4FOVvZj"},"elastic":{"key":"elastic","label":"Elastic strap + side-release buckles","amazon":"https://www.amazon.com/s?k=elastic%20strap%20side%20release%20buckle&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3r4Djz3"},"snaps":{"key":"snaps","label":"Snaps, rivets + setting tool","amazon":"https://www.amazon.com/s?k=snap%20rivet%20setting%20tool%20kit&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3u9TIQZ"},"velcro":{"key":"velcro","label":"Heavy-duty hook-and-loop strips","amazon":"https://www.amazon.com/s?k=heavy%20duty%20velcro%20strips&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c2we4C6h"},"fauxleather":{"key":"fauxleather","label":"Faux leather fabric","amazon":"https://www.amazon.com/s?k=faux%20leather%20fabric&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3MGVdC1"},"wig":{"key":"wig","label":"Heat-resistant cosplay wig","amazon":"https://www.amazon.com/s?k=cosplay%20wig%20heat%20resistant&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3wazypr"},"lacewig":{"key":"lacewig","label":"Lace-front cosplay wig","amazon":"https://www.amazon.com/s?k=lace%20front%20cosplay%20wig&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c2QhwoKh"},"wigspray":{"key":"wigspray","label":"Wig styling spray + wig head","amazon":"https://www.amazon.com/s?k=wig%20styling%20spray%20wig%20head&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c2Q9IP6H"},"facepaint":{"key":"facepaint","label":"Cosplay makeup / face paint","amazon":"https://www.amazon.com/s?k=cosplay%20face%20paint%20makeup&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3TeMkb3"},"scarwax":{"key":"scarwax","label":"Scar wax + liquid latex","amazon":"https://www.amazon.com/s?k=scar%20wax%20liquid%20latex&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c403hbBr"},"spiritgum":{"key":"spiritgum","label":"Prosthetic adhesive (spirit gum)","amazon":"https://www.amazon.com/s?k=spirit%20gum%20prosthetic%20adhesive&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c3ITTQSh"},"bootcovers":{"key":"bootcovers","label":"Boot cover base (stretch faux leather)","amazon":"https://www.amazon.com/s?k=stretch%20faux%20leather%20fabric&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c4O0bWVB"},"rope":{"key":"rope","label":"Gold braided rope","amazon":"https://www.amazon.com/s?k=gold%20braided%20rope&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c4nuW701"},"dowel":{"key":"dowel","label":"Wooden dowels","amazon":"https://www.amazon.com/s?k=wooden%20dowel%20rods&tag=cheapadeal-20","ali":"https://s.click.aliexpress.com/e/_c38mfbe5"}},"map":{"wig":[["wig","wigspray"],["lacewig","wigspray"]],"helmet":[["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["resin","sanding","fillerprimer"],["putty","sanding","fillerprimer"]],"headpiece":[["eva2","thermo","contact","heatgun"],["pla","sanding","fillerprimer"]],"chest":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"back":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"shoulders":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"forearms":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"gauntlets":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"abdomen":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"thighs":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"shins":[["eva10","eva5","contact","heatgun","sealer"],["eva10","eva5","contact","heatgun","sealer"],["pla","putty","sanding","fillerprimer"],["pla","putty","sanding","fillerprimer"]],"garment":[["fauxleather"],["fauxleather"],["fauxleather"]],"cape":[[]],"shoes":[[],["bootcovers","contact"]],"prop":[["eva10","dowel","contact","sealer"],["pla","putty","sanding","fillerprimer"],["resin","sanding","fillerprimer"],["putty","sanding","fillerprimer"]],"makeup":[["facepaint"],["scarwax","spiritgum"]],"acc":[["fauxleather","snaps"],["fauxleather","snaps"]],"paint":[["acrylic","clear"],["acrylic","clear"],["putty","acrylic","clear"]],"tools":[["knife","mat","heatgun","rotary"]],"armorStrap":["elastic","velcro"]}};</script>
+<script src="../js/calc.js?v=mwquofsj" defer></script>
+</main>
+<footer><div class="wrap">
+<span>BuildSheet - costume build plans worked back from con day. Fan-made guides, not affiliated with any studio or rights holder.</span>
+<nav aria-label="Footer"><a href="../guides/">Guides</a><a href="../cost-calculator/">Calculator</a><a href="../showcase/">Showcase</a><a href="../privacy/">Privacy</a></nav>
+</div></footer>
+<script src="../js/form.js?v=mwquofsj" defer></script>
+</body>
+</html>
